@@ -1,0 +1,24 @@
+Commande pour github
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Mohamedecorot/Git_graf.git
+git push -u origin main
+
+git init : pour initialiser un projet avec git
+git help config pour voir l'aide sur la configuration
+
+Une des premiers choses a faire c'est de s'identifier
+git config --global user.email "guerroui.m@gmail.com"
+git config --global user.name "mohamed"
+
+On peut aussi changer la couleur des commandes
+git config --global color.ui true
+
+Pour connaitre l'état de la configuration
+git config --list
+
+Pour connaitre l'état du dossier
+git status
