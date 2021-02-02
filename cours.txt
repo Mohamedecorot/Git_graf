@@ -22,3 +22,31 @@ git config --list
 
 Pour connaitre l'état du dossier
 git status
+
+Pour ajouter un fichier
+git add nomdufichier.extension
+
+Pour tout ajouter
+git add *
+
+Pour tout ajouter avec une extension
+git add "*.html"
+
+Pour effectuer un commit
+git commit -m "description des modifications apporté"
+
+Pour aller plus vite: ajout de fichier et commite en meme temps
+git commit -a -m "ajout de modification"
+
+Si on veut ignorer des fichiers a ne pas commit, il faut créer un fichier .gitignore
+
+Pour lister les derniers commits
+git log
+
+Pour voir les options: git help log
+
+ce qui peut etre interessant, pour voir sur une ligne
+git log --oneline
+
+pour voir les différences entre deux commits:
+git diff
