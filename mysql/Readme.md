@@ -27,11 +27,18 @@ On peut aussi faire (syntaxe alternative (propre a mysql)):
 INSERT INTO nomdelatable SET
 nomduchamp1="valeur1", nomduchamp2="valeur2";
 
-# Suppression de donnée
+# Suppression de données
 
 Pour la suppression simple:
 DELETE FROM [table] WHERE [condition]
-Pour sécurisé la suppression on peut ajouter le nom de ligne a supprimer en ajoutant par exemple: LIMIT 1
+Pour sécurisé la suppression on peut ajouter le nombre de ligne a supprimer en ajoutant par exemple: LIMIT 1
 
 Et pour vider totalement et efficacement une table
 TRUNCATE TABLE nomdelatable
+
+# Modification de données
+
+Pour la modification simple:
+UPDATE [table] SET champ=valeur, champ=valeur WHERE [conditions]
+(Pour sécurisé la modification on peut ajouter le nombre de ligne a supprimer en ajoutant par exemple: LIMIT 1
+)
