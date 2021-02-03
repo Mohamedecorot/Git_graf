@@ -50,3 +50,13 @@ git log --oneline
 
 pour voir les différences entre deux commits:
 git diff
+
+Pour revenir sur un commit en particulier, on peut faire un git log --oneline pour voir l'identifiant du commit
+ensuite on fait un git checkout numero_id_commit nom_du_fichier_a_recup
+
+Pour defaire un commit: git revert
+
+Pour revenir en arrière et a un commit precis: git reset
+
+Pour créer une branche : git branch nomdelabranche
+Pour aller sur cette branche: git checkout nomdelabranche
