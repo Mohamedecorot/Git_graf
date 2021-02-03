@@ -42,3 +42,22 @@ Pour la modification simple:
 UPDATE [table] SET champ=valeur, champ=valeur WHERE [conditions]
 (Pour sécurisé la modification on peut ajouter le nombre de ligne a supprimer en ajoutant par exemple: LIMIT 1
 )
+
+# Lecture de données
+
+Pour la sélection simple:
+SELECT champ champ champ FROM [table] WHERE [conditions]
+
+- Si on veut, on peut limiter la sélection avec LIMIT
+    Si on précise un seul chiffre après, cela signifie de 0 à ce chiffre
+    Si on précise un deux chiffres après, cela signifie du 1er chiffre au 2eme (c'est ainsi qu'on fera la pagination par exemple)
+
+- Si on veut récupérer tous les champs on peut utiliser un joker * :
+    SELECT * FROM [table] WHERE [conditions]
+
+- On peut également organiser les données en ajoutant ORDER BY suivi du nom du champ et on peut ajouter DESC pour inverser l'ordre
+
+- On peut également compter le nombre de données avec COUNT(*)
+
+- On peut également renommer un champ en utisant as
+Exemple: SELECT COUNT(*) as population FROM utlisateurs
