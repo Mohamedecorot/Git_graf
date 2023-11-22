@@ -1,0 +1,83 @@
+* git init : initialisation du dépôt local
+Dans le .git : tout le versionning
+
+* git add <nom fichier> : ajouter des fichiers
+(éviter git add .)
+
+* git commit : pour commenter les git add
+
+* git status : état du dépôt (actions à faire)
+
+Pour consulter la configuration :
+git config --list
+
+Pour configurer ou faire des modifications (par ex. email) :
+git config --global user.email monmail@g.fr
+
+-> GIT : logs : essentiel pour un outil de versionning
+
+* git log
+
+* git log --oneline
+
+* git log --oneline --graph
+
+* git log --oneline --graph --name-status
+
+Commande perso :
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Cblue - %cn %Creset' --abbrev-commit --date=relative
+
+Différence entre commits (git diff) : permet de voir lorsque quequ'un a fait évoluer un fichier et quelle ligne
+* git diff <commit1> <commit2>
+* git diff <branche1> <branche2> 
+
+-> GIT : le revert <-
+=========
+
+* git revert permet de revenir en arrière (un ou plusieurs commit)
+	- c'est la manière propre (différence de reset)
+		- car on garde une trace des commits (git reset non)
+
+
+état final : 	commit1 -- commit2 -- commit3
+
+objectif revenir à commit1
+
+revert :      commit1 -- commit2 -- commit3 -- commit2 -- commit1
+reset :				commit1
+
+* git revert <num_dernier_commit> : revenir au denrier commit
+
+* git revert HEAD~2..HEAD : revenir de 2 commits en arrière
+
+* ATTENTION : ne pas confondre avec git checkout <fichier> (à faire avant indexation)
+
+
+-> GIT : le blame <-
+=========
+
+* git blame : permet de lister les dernières modifications de chaque ligne d'un fichier
+
+* git blame <fichier> 
+
+* git blame -L l1,l2 <fichier>    : de la ligne l1 à l2
+
+* git log -S "ligne" --pretty=format:'%h %an %ad %s'   : recherche les logs concernant des lignes contenant "lignes"
+
+=========
+-> GIT : les branches <-
+
+* permet meilleure gestion des versions (espace de travail)
+
+* permet de travailler plus facilement à plusieurs
+
+* permet d'organiser les mises en production (notion de tags...)
+
+Commandes :
+
+git branch <nom_branche>   : création d'une branche
+
+git checkout <nom_branche> : changement de branche
+
+git merge <branche_source> : import d'une branche source vers ma branche actuelle
+
